@@ -178,5 +178,108 @@ html{scroll-behavior:smooth;}
 © 2026 - Noticias Ambientales | Derechos reservados TGS y Manuel
 </footer>
 
+
+<!-- PANEL FUNCIONES (sin modificar contenido existente) -->
+<div style="position:fixed;bottom:10px;right:10px;background:#fff;border:1px solid #ddd;padding:10px;border-radius:8px;font-size:12px;">
+  <div>Visitas: <span id="visitas"></span></div>
+  <button onclick="toggleModo()">Modo oscuro</button><br><br>
+  <input type="text" placeholder="Buscar..." onkeyup="buscar(this.value)">
+</div>
+
+<style>
+.dark{background:#111;color:#eee}
+
+/* BOTONES Y BUSCADOR MINIMALISTAS */
+button{
+  background:#ffffff;
+  border:1px solid #ddd;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:12px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+button:hover{
+  background:#f5f5f5;
+  border-color:#2e7d32;
+  color:#2e7d32;
+}
+
+input{
+  border:1px solid #ddd;
+  padding:6px 8px;
+  border-radius:6px;
+  font-size:12px;
+  outline:none;
+  transition:0.2s;
+}
+
+input:focus{
+  border-color:#2e7d32;
+}
+.featured{font-size:1.2em;border-left:4px solid #2e7d32;padding-left:10px}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+
+// 1. Contador visitas
+let visitas = localStorage.getItem("visitas") || 0;
+visitas++;
+localStorage.setItem("visitas", visitas);
+document.getElementById("visitas").innerText = visitas;
+
+// 2. Modo oscuro
+window.toggleModo = function(){
+  document.body.classList.toggle("dark");
+}
+
+// 3. Buscador
+window.buscar = function(texto){
+  let cards = document.querySelectorAll(".card");
+  cards.forEach(c => {
+    c.style.display = c.innerText.toLowerCase().includes(texto.toLowerCase()) ? "block" : "none";
+  });
+}
+
+// 5. Favoritos
+let cards = document.querySelectorAll(".card");
+cards.forEach((card,i)=>{
+  let btn=document.createElement("button");
+  btn.textContent="⭐ Guardar";
+  btn.onclick=()=>{
+    localStorage.setItem("fav_"+i,card.innerText);
+    btn.textContent="✔ Guardado";
+  };
+  card.appendChild(btn);
+});
+
+// 6. Animación scroll
+window.addEventListener("scroll",()=>{
+  document.querySelectorAll(".card").forEach(card=>{
+    let top=card.getBoundingClientRect().top;
+    if(top<window.innerHeight){
+      card.style.opacity=1;
+      card.style.transform="translateY(0)";
+    }
+  });
+});
+
+// estado inicial animación
+cards.forEach(card=>{
+  card.style.opacity=0;
+  card.style.transform="translateY(20px)";
+  card.style.transition="0.5s";
+});
+
+// 7. Noticia destacada
+if(cards[0]){
+  cards[0].classList.add("featured");
+}
+
+});
+</script>
+
 </body>
 </html>
