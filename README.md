@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noticias Ambientales</title>
+<title>#DeCabonize</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -23,6 +23,7 @@ header{
 
 h1{
   font-size:2.5em;
+  color:#2e7d32;
 }
 
 nav{
@@ -91,7 +92,7 @@ html{scroll-behavior:smooth;}
 <body>
 
 <header>
-<h1>🌿 Noticias Ambientales</h1>
+<h1>#DeCarbonize Notices</h1>
 <p>Tu estilo de vida sostenible</p>
 </header>
 
