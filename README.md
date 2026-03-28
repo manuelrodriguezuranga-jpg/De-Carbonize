@@ -1,181 +1,181 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cuidado Ambiental</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticias Ambientales</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d1117;
-      color: #e6edf3;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    header {
-      background: #161b22;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #2ea043;
-    }
+body{
+  font-family: Georgia, serif;
+  background:#ffffff;
+  color:#222;
+  line-height:1.7;
+}
 
-    h1 {
-      color: #2ea043;
-      margin: 0;
-    }
+header{
+  text-align:center;
+  padding:30px;
+  border-bottom:2px solid #e5e5e5;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      padding: 10px;
-      background: #0d1117;
-    }
+h1{
+  font-size:2.5em;
+}
 
-    nav button {
-      background: #2ea043;
-      border: none;
-      padding: 10px 15px;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:15px;
+  border-bottom:1px solid #eee;
+}
 
-    nav button:hover {
-      background: #238636;
-    }
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:bold;
+}
 
-    section {
-      padding: 20px;
-      display: none;
-    }
+nav a:hover{
+  color:#2e7d32;
+}
 
-    section.active {
-      display: block;
-    }
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:30px;
+}
 
-    .card {
-      background: #161b22;
-      padding: 15px;
-      margin: 10px 0;
-      border-left: 4px solid #2ea043;
-      border-radius: 5px;
-    }
+.card{
+  border-bottom:1px solid #eee;
+  padding:20px 0;
+  transition:0.2s;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #161b22;
-      margin-top: 20px;
-      font-size: 14px;
-    }
-  </style>
+.card:hover{
+  padding-left:5px;
+}
+
+.card h2{
+  font-size:1.5em;
+  margin-bottom:10px;
+}
+
+.card h2:hover{
+  color:#2e7d32;
+}
+
+.card p{
+  margin-bottom:10px;
+  color:#444;
+}
+
+section{
+  margin-top:40px;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#888;
+  border-top:1px solid #eee;
+  margin-top:30px;
+}
+html{scroll-behavior:smooth;}
+</style>
+
 </head>
-
 <body>
 
 <header>
-  <h1>🌍 Cuidado Ambiental</h1>
-  <p>Protejamos el planeta juntos</p>
+<h1>🌿 Noticias Ambientales</h1>
+<p>Tu estilo de vida sostenible</p>
 </header>
 
 <nav>
-  <button onclick="mostrar('inicio')">Inicio</button>
-  <button onclick="mostrar('problemas')">Problemas</button>
-  <button onclick="mostrar('soluciones')">Soluciones</button>
-  <button onclick="mostrar('acciones')">Acciones</button>
+<a href="#inicio">Inicio</a>
+<a href="#problemas">Problemas</a>
+<a href="#soluciones">Soluciones</a>
+<a href="#acciones">Acciones</a>
 </nav>
 
-<section id="inicio" class="active">
-  <div class="card">
-    <h2>¿Por qué es importante?</h2>
-    <p>El cuidado ambiental es fundamental para la vida en la Tierra. Nos permite conservar los recursos naturales y garantizar un futuro sostenible.</p>
-  </div>
+<div class="container">
 
-  <div class="card">
-    <h2>Impacto humano</h2>
-    <p>Las actividades humanas como la contaminación, la deforestación y el consumo excesivo afectan gravemente al planeta.</p>
-  </div>
+<section id="inicio">
+<div class="card">
+<h2>Bienvenida</h2>
+<p>Este espacio reúne noticias y reflexiones sobre el cuidado ambiental.</p>
+</div>
 </section>
 
 <section id="problemas">
-  <div class="card">
-    <h2>🌫 Contaminación</h2>
-    <p>El aire, agua y suelo están siendo contaminados por industrias y residuos.</p>
-  </div>
+<div class="card">
+<h2>Contaminación urbana en aumento</h2>
+<p>Los niveles de contaminación crecen y obligan a replantear políticas actuales.</p>
+<p>Empresas como Microsoft trabajan en reducir emisiones.</p>
+</div>
 
-  <div class="card">
-    <h2>🌳 Deforestación</h2>
-    <p>La tala masiva destruye hábitats y reduce la biodiversidad.</p>
-  </div>
+<div class="card">
+<h2>Deforestación sin freno</h2>
+<p>La tala continúa generando desequilibrio ambiental.</p>
+<p>Natura invierte en proteger la Amazonía.</p>
+</div>
 
-  <div class="card">
-    <h2>🔥 Cambio climático</h2>
-    <p>El aumento de gases de efecto invernadero provoca calentamiento global.</p>
-  </div>
+<div class="card">
+<h2>Problema del plástico</h2>
+<p>El uso excesivo sigue siendo un desafío global.</p>
+<p>Nestlé busca reducir envases contaminantes.</p>
+</div>
 </section>
 
 <section id="soluciones">
-  <div class="card">
-    <h2>♻ Reciclaje</h2>
-    <p>Separar residuos ayuda a reducir la contaminación.</p>
-  </div>
+<div class="card">
+<h2>Energías renovables en expansión</h2>
+<p>Las energías limpias crecen, aunque no lo suficiente.</p>
+<p>Acciona desarrolla proyectos sostenibles.</p>
+</div>
 
-  <div class="card">
-    <h2>🔋 Energías renovables</h2>
-    <p>Utilizar energía solar y eólica disminuye el impacto ambiental.</p>
-  </div>
+<div class="card">
+<h2>Reciclaje en evolución</h2>
+<p>El reciclaje avanza, pero aún presenta desafíos.</p>
+<p>Grupo Bimbo impulsa economía circular.</p>
+</div>
 
-  <div class="card">
-    <h2>🚲 Transporte sostenible</h2>
-    <p>Usar bicicleta o transporte público reduce emisiones.</p>
-  </div>
+<div class="card">
+<h2>Reforestación en aumento</h2>
+<p>Se plantan más árboles como estrategia ambiental.</p>
+<p>Empresas compensan emisiones.</p>
+</div>
 </section>
 
 <section id="acciones">
-  <div class="card">
-    <h2>💡 ¿Qué podés hacer?</h2>
-    <ul>
-      <li>Apagar luces innecesarias</li>
-      <li>Reducir el uso de plástico</li>
-      <li>Ahorrar agua</li>
-      <li>Plantar árboles</li>
-    </ul>
-  </div>
+<div class="card">
+<h2>Consumo responsable</h2>
+<p>Las personas modifican hábitos de compra.</p>
+<p>Patagonia promueve reutilización.</p>
+</div>
 
-  <div class="card">
-    <h2>🌱 Calculador ecológico</h2>
-    <p>¿Cuántas acciones hiciste hoy?</p>
-    <input type="number" id="accionesInput" placeholder="Ej: 3">
-    <button onclick="calcularImpacto()">Calcular impacto</button>
-    <p id="resultado"></p>
-  </div>
+<div class="card">
+<h2>Transporte sostenible</h2>
+<p>Se adoptan nuevas formas de movilidad.</p>
+<p>Mercado Libre impulsa logística verde.</p>
+</div>
+
+<div class="card">
+<h2>Educación ambiental</h2>
+<p>La educación es clave para el cambio.</p>
+<p>Coca-Cola impulsa programas educativos.</p>
+</div>
 </section>
 
+</div>
+
 <footer>
-  © 2026 - Cuidado Ambiental
+© 2026 - Noticias Ambientales | Derechos reservados TGS y Manuel
 </footer>
-
-<script>
-  function mostrar(seccion) {
-    document.querySelectorAll("section").forEach(sec => {
-      sec.classList.remove("active");
-    });
-    document.getElementById(seccion).classList.add("active");
-  }
-
-  function calcularImpacto() {
-    let acciones = document.getElementById("accionesInput").value;
-    let resultado = document.getElementById("resultado");
-
-    if (acciones > 0) {
-      resultado.textContent = "🌍 ¡Buen trabajo! Estás ayudando al planeta.";
-    } else {
-      resultado.textContent = "⚠ Intenta hacer al menos una acción ecológica hoy.";
-    }
-  }
-</script>
 
 </body>
 </html>
